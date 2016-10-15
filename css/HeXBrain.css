@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Sketch Block';
+    src: url('fonts/sketch_block-webfont.eot');
+}
 .row {
     position: absolute;
     background-color: rgba(255, 255, 255, 0);
@@ -81,6 +85,7 @@
     text-align: center;
     top: 50px;
     width: 100%;
+    font: 1em "Sketch Block";
 }
 
 .game-over-skull:hover {
