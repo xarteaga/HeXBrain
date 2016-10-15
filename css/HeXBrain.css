@@ -1,0 +1,420 @@
+.row {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    width: 100%;
+    top: 75px;
+    height: auto;
+    margin: auto;
+}
+
+.quizbox {
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* Transitions */
+.row, .quizbox, .box, .prompt-display, .guess-display, .prompt-text, .guess-text, .numpad, .numpad-btn, .game-over-skull, .game-over-text,  .game-over-prompt{
+    -webkit-transition: all 1s ease-out, background-color 0.1s;
+    -moz-transition: all 1s ease-out, background-color 0.1s;
+    -ms-transition: all 1s ease-out, background-color 0.1s;
+    -o-transition: all 1s ease-out, background-color 0.1s;
+    transition: all 1s ease-out, background-color 0.1s;
+}
+
+.box {
+    position: relative;
+    margin: auto;
+    box-shadow: 10px 10px 5px #888888;
+    left: 0px;
+}
+
+.prompt-display {
+    position: absolute;
+    border: 1px solid #A0A0A0;
+    background-color: #E0E0E0;
+}
+
+.guess-display {
+    position: absolute;
+    border: 1px solid #A0A0A0;
+    background-color: #F0F0F0;
+}
+
+.guess-display-default {
+    position: absolute;
+    border: 1px solid #A0A0A0;
+    background-color: #F0F0F0;
+}
+
+.guess-display-success {
+    position: absolute;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    background-color: #dff0d8;
+}
+
+.guess-display-fail {
+    position: absolute;
+    color: #fffae1;
+    border: 1px solid #ebccd1;
+    background-color: #f2dede;
+}
+
+.game-over-box {
+    color: #fffae1;
+    border: none;
+    background-color: rgb(160, 55, 65);
+}
+
+.game-over-text, .game-over-prompt {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.game-over-skull {
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 100%;
+}
+
+.game-over-skull:hover {
+    color: #5cb8ff;
+}
+
+.prompt-text, .guess-text {
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.numpad {
+    position: absolute;
+}
+
+.numpad-btn {
+    padding: 0%;
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.numpad-col1 {
+    left: 0%;
+}
+
+.numpad-col2 {
+    left: 35%;
+}
+
+.numpad-col3 {
+    left: 70%;
+}
+
+.numpad-row1 {
+    top: 0%;
+}
+
+.numpad-row2 {
+    top: 26.67%;
+}
+
+.numpad-row3 {
+    top: 53.33%;
+}
+
+.numpad-row4 {
+    top: 80%;
+}
+
+.centered {
+    text-align: center;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    margin: auto;
+}
+
+.popover {
+    width: 500px;
+    right: 250px;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+.next-panel {
+    left: -200%;
+    z-index: 0;
+}
+
+.prev-panel {
+    left: 200%;
+    z-index: 2;
+}
+
+.current-panel {
+    z-index: 1;
+}
+
+.progress-bar {
+    text-align: right;
+}
+
+@media (orientation: landscape) {
+    .prompt-display, .guess-display {
+        left: 10%;
+        width: 35%;
+        height: 20%;
+    }
+
+    .prompt-display {
+        top: 15%;
+    }
+
+    .guess-display {
+        top: 45%;
+    }
+
+    .numpad {
+        left: 55%;
+        top: 15%;
+        width: 35%;
+        height: 70%;
+    }
+}
+
+@media (orientation: portrait) {
+    .prompt-display, .guess-display {
+        left: 10%;
+        width: 80%;
+        height: 10%;
+    }
+
+    .prompt-display {
+        top: 5%;
+    }
+
+    .guess-display {
+        top: 20%;
+    }
+
+    .numpad {
+        left: 10%;
+        top: 35%;
+        width: 80%;
+        height: 60%;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) and (orientation: landscape) {
+    .row {
+        height: 300px;
+    }
+
+    .quizbox {
+        height: 300px;
+    }
+
+    .box {
+        width: 475px;
+        height: 293px;
+    }
+
+    .prompt-text, .guess-text, .numpad-btn {
+        font-size: 35px;
+    }
+
+    .game-over-text {
+        top: 25px;
+        font-size: 35px;
+    }
+    .game-over-prompt {
+        top: 65px;
+        font-size: 20px;
+    }
+    .game-over-skull {
+        top: 35px;
+        font-size: 200px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
+    .row {
+        height: 390px;
+    }
+
+    .quizbox {
+        height: 390px;
+    }
+
+    .box {
+        width: 613px;
+        height: 379px;
+    }
+
+    .prompt-text, .guess-text, .numpad-btn {
+        vertical-align: middle;
+        font-size: 45px;
+    }
+
+    .game-over-text {
+        top: 30px;
+        font-size: 40px;
+    }
+
+    .game-over-prompt {
+        top: 75px;
+        font-size: 25px;
+    }
+
+    .game-over-skull {
+        top: 55px;
+        font-size: 230px;
+    }
+}
+
+@media (min-width: 993px) and (orientation: landscape) {
+    .row {
+        height: 470px;
+    }
+
+    .quizbox {
+        height: 470px;
+    }
+
+    .box {
+        width: 741px;
+        height: 459px;
+    }
+
+    .prompt-text, .guess-text, .numpad-btn {
+        font-size: 50px;
+    }
+
+    .game-over-text {
+        top: 35px;
+        font-size: 45px;
+    }
+
+    .game-over-prompt {
+        top: 85px;
+        font-size: 25px;
+    }
+
+    .game-over-skull {
+        top: 50px;
+        font-size: 300px;
+    }
+}
+
+@media (min-height: 0px) and (max-height: 768px) and (orientation: portrait) {
+    .row {
+        height: 485px;
+    }
+
+    .quizbox {
+        height: 485px;
+    }
+
+    .box {
+        width: 293px;
+        height: 475px;
+    }
+
+    .prompt-text, .guess-text, .numpad-btn {
+        font-size: 35px;
+    }
+
+    .game-over-text {
+        top: 35px;
+        font-size: 35px;
+    }
+    .game-over-prompt {
+        top: 75px;
+        font-size: 20px;
+    }
+    .game-over-skull {
+        top: 40px;
+        font-size: 300px;
+    }
+}
+
+@media (min-height: 769px) and (max-height: 992px) and (orientation: portrait) {
+    .row {
+        height: 625px;
+    }
+
+    .quizbox {
+        height: 625px;
+    }
+
+    .box {
+        width: 379px;
+        height: 613px;
+    }
+
+    .prompt-text, .guess-text, .numpad-btn {
+        font-size: 45px;
+    }
+
+    .game-over-text {
+        top: 40px;
+        font-size: 40px;
+    }
+    .game-over-prompt {
+        top: 90px;
+        font-size: 20px;
+    }
+    .game-over-skull {
+        top: 50px;
+        font-size: 400px;
+    }
+}
+
+@media (min-height: 993px) and (orientation: portrait) {
+    .row {
+        height: 755px;
+    }
+
+    .quizbox {
+        height: 755px;
+    }
+
+    .box {
+        width: 459px;
+        height: 741px;
+    }
+
+    .prompt-text, .guess-text, .numpad-btn {
+        font-size: 50px;
+    }
+
+    .game-over-text {
+        top: 50px;
+        font-size: 70px;
+    }
+    .game-over-prompt {
+        top: 130px;
+        font-size: 20px;
+    }
+    .game-over-skull {
+        top: 50px;
+        font-size: 500px;
+    }
+}
