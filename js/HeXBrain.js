@@ -108,9 +108,29 @@ function setNumberTodo(num) {
 }
 
 function RandomNumber() {
-    var min = Math.pow(16, difficulty - 1),
-        max = Math.pow(16, difficulty + 1),
-        number = Math.floor((Math.random() * (max - min)) + min);
+    switch(difficulty) {
+        case 1:
+            min = 10;
+            max = 15;
+            break;
+        case 2:
+            min = 10;
+            max = 159;
+            break;
+        case 3:
+            min = 16;
+            max = 159;
+            break;
+        case 4:
+            min = 159;
+            max = 255;
+            break;
+        case 5:
+        default:
+            min = 160;
+            max = 2559;
+    }
+    var number = Math.round((Math.random() * (max - min)) + min);
 
     return {
         hex: number.toString(16).toUpperCase(),
@@ -168,7 +188,7 @@ function NextNumber() {
     temp.className = "prompt-display";
     text = document.createElement("p");
     text.className = "prompt-text";
-    text.innerText = "0x" + number.hex;
+    text.innerText = "" + number.hex;
     temp.appendChild(text);
     box.appendChild(temp);
 
